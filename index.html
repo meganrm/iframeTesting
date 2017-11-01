@@ -21,8 +21,7 @@
   }
 
   var param = getUrlParameter('refcode')
-  var currentSrc = $('.iframe').attr('src');
-  var newSrc = currentSrc + '?refcode=' + param;
+  var newSrc = 'https://iframetarget.herokuapp.com/' + '?refcode=' + param;
   console.log(newSrc);
   $('.currentParams').attr('src', newSrc)
   </script>
