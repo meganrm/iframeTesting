@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <iframe class="iframe" src="https://iframetarget.herokuapp.com/" width="" height=""></iframe>
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  function getUrlParameter(param) {
+    var query = document.location.search.match(new RegExp('([?&])' + param + '[^&]*'));
+    if (query) {
+      return query[0].split('=')[1];
+    }
+    return false;
+  }
+
+  var param = getUrlParameter('refcode')
+  console.log(param);
+  var currentSrc = $('.iframe').attr(scr);
+  var newSrc = currentSrc + '?refcode=' + param
+  $('.currentParams').attr(src, newSrc)
+  </script>
+</html>
