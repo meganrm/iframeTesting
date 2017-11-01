@@ -21,9 +21,9 @@
   }
 
   var param = getUrlParameter('refcode')
-  console.log(param);
   var currentSrc = $('.iframe').attr('src');
-  var newSrc = currentSrc + '?refcode=' + param
+  var newSrc = currentSrc + '?refcode=' + param;
+  console.log(newSrc);
   $('.currentParams').attr('src', newSrc)
   </script>
 </html>
