@@ -22,7 +22,7 @@
 
   var param = getUrlParameter('refcode')
   console.log(param);
-  var currentSrc = $('.iframe').attr(scr);
+  var currentSrc = $('.iframe').attr(src);
   var newSrc = currentSrc + '?refcode=' + param
   $('.currentParams').attr(src, newSrc)
   </script>
