@@ -18,16 +18,8 @@
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
   <script type="text/javascript">
-  function getSearch() {
-    var query = document.location.search;
-    if (query) {
-      return query;
-    }
-    return '';
-  }
-  var search = getSearch()
-  var newSrc = 'https://indivisible-org.github.io/indivisible-map/events' + search;
-  console.log('new url', newSrc);
+
+  var newSrc = 'https://indivisible-org.github.io/indivisible-map/events' + document.location.search;
   $('.iframe').attr('src', newSrc)
   </script>
 </html>
