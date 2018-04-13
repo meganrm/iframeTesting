@@ -5,23 +5,22 @@
     <title></title>
   </head>
   <body>
-    <iframe class="iframe" src="https://iframetarget.herokuapp.com/" width="" height=""></iframe>
+    <iframe class="iframe" src="https://indivisible-org.github.io/indivisible-map/events" width="" height=""></iframe>
   </body>
   <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
   <script type="text/javascript">
-  function getUrlParameter(param) {
-    var query = document.location.search.match(new RegExp('([?&])' + param + '[^&]*'));
+  function getSearch() {
+    var query = document.location.search;
     if (query) {
-      return query[0].split('=')[1];
+      return query;
     }
     return false;
   }
-
-  var param = getUrlParameter('refcode')
-  var newSrc = 'https://iframetarget.herokuapp.com/' + '?refcode=' + param;
+  var search = getSearch()
+  var newSrc = 'https://indivisible-org.github.io/indivisible-map/events' + search;
   console.log('new url', newSrc);
   $('.iframe').attr('src', newSrc)
   </script>
